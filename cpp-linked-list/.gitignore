@@ -49,3 +49,4 @@ _deps
 # Misc. folder
 build/
 .vscode/
+cpp-linked-list/test/LinkedList

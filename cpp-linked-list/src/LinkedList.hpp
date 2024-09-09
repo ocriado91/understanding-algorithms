@@ -49,9 +49,9 @@ struct ListNode {
 
     size_t size() {
         unsigned int count = 0;
-        ListNode *nextNode= this->next;
-        while (nextNode->next != nullptr) {
-            nextNode = nextNode->next;
+        ListNode* current = this;
+        while (current->next != nullptr) {
+            current = current->next;
             count++;
         }
         return count;
