@@ -1,0 +1,22 @@
+name: Linked List Unit Tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        cd cpp-linked-list/test/
+        cmake .
+        make -j4
+
+    - name: Run Unit Tests
+      run: |
+        cd cpp-linked-list/test/
+        ./LinkedListTest
